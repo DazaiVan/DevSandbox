@@ -2,7 +2,7 @@
 
 <h1 align="center">
   <br>
-  <a href="https://github.com/DazaiVan/DevSandbox/archive/refs/heads/main.zip"><img src="https://i.pinimg.com/originals/d9/d3/58/d9d358be24f3186070cfc996b04e1984.gif" alt="ArminC AutoExec"></a>
+  <a href="https://github.com/DazaiVan/DevSandbox/archive/refs/heads/main.zip"><img src="https://i.pinimg.com/originals/50/26/45/5026454ee32a428781ad5e39226ad026.gif" alt="ArminC AutoExec"></a>
 </h1>
 
 <h4 align="center">My Sandbox</h4>
