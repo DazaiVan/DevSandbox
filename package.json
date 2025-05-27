@@ -19,7 +19,6 @@
     "three": "^0.176.0"
   },
   "devDependencies": {
-    "@emotion/babel-plugin": "^11.13.5",
     "@emotion/eslint-plugin": "^11.12.0",
     "@eslint/js": "^9.25.0",
     "@swc/core": "^1.11.29",
