@@ -51,6 +51,9 @@ importers:
       '@react-three/fiber':
         specifier: ^9.1.2
         version: 9.1.2(@types/react@19.1.5)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)(three@0.176.0)
+      '@types/three':
+        specifier: ^0.176.0
+        version: 0.176.0
       react:
         specifier: ^19.1.0
         version: 19.1.0

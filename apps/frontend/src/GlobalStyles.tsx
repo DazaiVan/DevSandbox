@@ -49,6 +49,14 @@ const styles: Record<string, CSSObject> = {
       outline: '4px auto -webkit-focus-ring-color'
     }
   },
+  canvasContainer: {
+    position: 'fixed', // или 'absolute' по вашему выбору
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '100vh',
+    overflow: 'hidden'
+  },
   lightScheme: {
     '@media (prefers-color-scheme: light)': {
       ':root': {
@@ -73,6 +81,7 @@ const GlobalStyles = () => (
       body: styles.body,
       h1: styles.h1,
       button: styles.button,
+      '.canvas-container': styles.canvasContainer,
       ...styles.lightScheme
     })}
   />
