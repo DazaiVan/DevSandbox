@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "types": ["@react-three/fiber"],
+    "types": ["@react-three/fiber","@react-three/drei","three"],
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",

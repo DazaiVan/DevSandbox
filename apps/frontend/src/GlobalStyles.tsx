@@ -49,14 +49,7 @@ const styles: Record<string, CSSObject> = {
       outline: '4px auto -webkit-focus-ring-color'
     }
   },
-  canvasContainer: {
-    position: 'fixed', // или 'absolute' по вашему выбору
-    top: 0,
-    left: 0,
-    width: '100vw',
-    height: '100vh',
-    overflow: 'hidden'
-  },
+
   lightScheme: {
     '@media (prefers-color-scheme: light)': {
       ':root': {
@@ -70,7 +63,56 @@ const styles: Record<string, CSSObject> = {
         backgroundColor: '#f9f9f9'
       }
     }
-  }
+  },
+  appContainer: {
+    display: 'flex',
+    width: '100vw',
+    height: '100vh',
+    position: 'fixed',
+    top: 0,
+    left: 0,
+  },
+  canvasContainer: {
+    width: '100%', // изменено с flex: 1
+    height: '100vh',
+    position: 'relative', // важно для позиционирования правой панели
+    overflow: 'hidden'
+  },
+  rightPanel: {
+    width: '300px',
+    height: '100vh',
+    backgroundColor: '#1a1a1a',
+    borderLeft: '1px solid #333',
+    padding: '20px',
+    overflowY: 'auto',
+    color: 'white',
+    position: 'absolute', // абсолютное позиционирование
+    right: 0, // прижимаем к правому краю
+    top: 0, // прижимаем к верхнему краю
+    zIndex: 10, // поверх других элементов
+    '& h2': {
+      marginTop: 0,
+      paddingBottom: '10px',
+      borderBottom: '1px solid #333'
+    },
+    '& .panel-content': {
+      display: 'flex',
+      flexDirection: 'column',
+      gap: '10px'
+    },
+    '& button': {
+      width: '100%',
+      padding: '10px',
+      backgroundColor: '#333',
+      color: 'white',
+      border: 'none',
+      borderRadius: '4px',
+      cursor: 'pointer',
+      '&:hover': {
+        backgroundColor: '#444'
+      }
+    }
+  },
 }
 
 const GlobalStyles = () => (
@@ -81,7 +123,9 @@ const GlobalStyles = () => (
       body: styles.body,
       h1: styles.h1,
       button: styles.button,
+      '.app-container': styles.appContainer,
       '.canvas-container': styles.canvasContainer,
+      '.right-panel': styles.rightPanel,
       ...styles.lightScheme
     })}
   />
