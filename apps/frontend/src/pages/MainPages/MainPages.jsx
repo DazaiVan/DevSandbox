@@ -5,8 +5,8 @@ import CanvasBabylon from "../../components/canvasComponentsBabylon/CanvasBabylo
 function MainPages() {
   return (
     <>
-      {/* <CanvasComponent/> */}
-      <CanvasBabylon />
+      <CanvasComponent />
+      {/* <CanvasBabylon /> */}
     </>
   );
 }
