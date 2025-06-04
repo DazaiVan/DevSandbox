@@ -1,5 +1,6 @@
 import Scene from "./canvas/Scene";
 import useCounterStore from "../../store/store";
+import TestTS from "../TestTS";
 
 function CanvasComponent() {
   const {count} = useCounterStore();
@@ -18,7 +19,9 @@ function CanvasComponent() {
           </div>
         )}
       </div>
+      <TestTS />
     </div>
+
   );
 }
 

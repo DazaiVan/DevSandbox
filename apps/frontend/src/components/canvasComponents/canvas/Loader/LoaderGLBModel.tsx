@@ -18,3 +18,4 @@ function LoaderGLBModel({ url, position = [0, 0, 0]}: LoaderGLBModelProps) {
   );
 }
 export default LoaderGLBModel
+

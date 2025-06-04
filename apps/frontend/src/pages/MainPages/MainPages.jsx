@@ -1,12 +1,14 @@
-import './MainPages.css'
-import CanvasComponent from '../../components/canvasComponents/СanvasComponent'
-function MainPages() {
+import "./MainPages.css";
+import CanvasComponent from "../../components/canvasComponents/СanvasComponent";
+import CanvasBabylon from "../../components/canvasComponentsBabylon/CanvasBabylon";
 
+function MainPages() {
   return (
     <>
-      <CanvasComponent/>
+      {/* <CanvasComponent/> */}
+      <CanvasBabylon />
     </>
-  )
+  );
 }
 
-export default MainPages
+export default MainPages;

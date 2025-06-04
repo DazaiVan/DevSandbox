@@ -10,12 +10,16 @@
     "lint": "eslint . --fix"
   },
   "dependencies": {
+    "@babylonjs/core": "^8.10.1",
+    "@babylonjs/gui": "^8.10.1",
+    "@babylonjs/loaders": "^8.10.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@react-three/drei": "^10.0.7",
     "@react-three/fiber": "^9.1.2",
     "@types/three": "^0.176.0",
     "react": "^19.1.0",
+    "react-babylonjs": "3.2.5-beta.2",
     "react-dom": "^19.1.0",
     "three": "^0.176.0",
     "zustand": "^5.0.5"

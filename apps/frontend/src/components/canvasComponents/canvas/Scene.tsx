@@ -7,12 +7,12 @@ import { useGLTF } from '@react-three/drei';
 interface SceneProps{
 
 }
-useGLTF.preload('/emo_robot.glb')
+useGLTF.preload('/spaces2.glb')
 function Scene({ }:SceneProps) {
   return (
     <Canvas camera={{far:5000}}>
       <Settings />
-      <LoaderGLBModel url={'/emo_robot.glb'} />
+      <LoaderGLBModel url={'/space2.glb'} />
       {/* <TestCube /> */}
     </Canvas>
   );

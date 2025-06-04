@@ -4,6 +4,9 @@
     "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Node",
+    
+    "noImplicitAny": true,
+
     "strict": true,
     "jsx": "react-jsx",
     "jsxImportSource": "@emotion/react",
@@ -19,6 +22,6 @@
     }
   },
   
-  "include":["src/**/*.ts"],
+  "include":["src/**/*.ts", "src/components/test.tsx"],
   "exclude": ["node_modules", "dist","**/*.test.ts"]
 }

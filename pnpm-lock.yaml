@@ -39,6 +39,15 @@ importers:
 
   apps/frontend:
     dependencies:
+      '@babylonjs/core':
+        specifier: ^8.10.1
+        version: 8.10.1
+      '@babylonjs/gui':
+        specifier: ^8.10.1
+        version: 8.10.1(@babylonjs/core@8.10.1)
+      '@babylonjs/loaders':
+        specifier: ^8.10.1
+        version: 8.10.1(@babylonjs/core@8.10.1)(babylonjs-gltf2interface@8.10.1)
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@19.1.5)(react@19.1.0)
@@ -57,6 +66,9 @@ importers:
       react:
         specifier: ^19.1.0
         version: 19.1.0
+      react-babylonjs:
+        specifier: 3.2.5-beta.2
+        version: 3.2.5-beta.2(@babylonjs/core@8.10.1)(@babylonjs/gui@8.10.1(@babylonjs/core@8.10.1))(react-dom@19.1.0(react@19.1.0))(react-reconciler@0.31.0(react@19.1.0))(react@19.1.0)
       react-dom:
         specifier: ^19.1.0
         version: 19.1.0(react@19.1.0)
@@ -161,6 +173,20 @@ packages:
   '@babel/types@7.27.1':
     resolution: {integrity: sha512-+EzkxvLNfiUeKMgy/3luqfsCWFRXLb7U6wNQTk60tovuckwB15B191tJWvpp4HjiQWdJkCxO3Wbvc6jlk3Xb2Q==}
     engines: {node: '>=6.9.0'}
+
+  '@babylonjs/core@8.10.1':
+    resolution: {integrity: sha512-tE2lRU84QlwLExT5kFhHCacisCrMfHX4EF7AECb611xr1XuRBZB/zSfCR1I6PQUaR16RPSoyLnJlHasEWY81zA==}
+
+  '@babylonjs/gui@8.10.1':
+    resolution: {integrity: sha512-oU22zcJgrlVvmah/p85wslNkINb5dqz0Hz8/qOfKpxCGBwm+ddQxaLaB+xweDYLbgDv7Dqpmlk7sKo1ZIqYE9Q==}
+    peerDependencies:
+      '@babylonjs/core': ^8.0.0
+
+  '@babylonjs/loaders@8.10.1':
+    resolution: {integrity: sha512-3emh/m5JcPusQH7/dftKsYLeTr/zkg5u6sR7zkc0R0QQ7f37wn4MK3ETKDzXH2j6W8Nl365hd/Y7AI04N84Q6g==}
+    peerDependencies:
+      '@babylonjs/core': ^8.0.0
+      babylonjs-gltf2interface: ^8.0.0
 
   '@cspotcode/source-map-support@0.8.1':
     resolution: {integrity: sha512-IchNf6dN4tHoMFIn/7OE8LWZ19Y6q/67Bmf6vnGREv8RSbBVb9LPJxEcnwrcwX6ixSvaiGoomAUvu4YSxXrVgw==}
@@ -966,6 +992,9 @@ packages:
   babel-plugin-macros@3.1.0:
     resolution: {integrity: sha512-Cg7TFGpIr01vOQNODXOOaGz2NpCU5gl8x1qJFbb6hbZxR7XrcE2vtbAsTAbJ7/xwJtUuJEw8K8Zr/AE0LHlesg==}
     engines: {node: '>=10', npm: '>=6'}
+
+  babylonjs-gltf2interface@8.10.1:
+    resolution: {integrity: sha512-//NDIju5KWbtCrx7NpJIWa9uvaRj/8D9GCiKAXGu1K9tgnHOp4EK7fFzPU+FjH9QCrsiSLdGTNdvyoKVfF9VjQ==}
 
   balanced-match@1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
@@ -1911,6 +1940,19 @@ packages:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
     engines: {node: '>= 0.8'}
 
+  react-babylonjs@3.2.5-beta.2:
+    resolution: {integrity: sha512-loYNlDCVj9MK8ftd5Tmyzp/iZtmVM7jk314kCQOSDubnw63OvOiwlPeY8s8bptLLIHSnSLyYQB8Tos6A275o8A==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      '@babylonjs/core': 5.x || 6.x || 7.x || 8.x
+      '@babylonjs/gui': 5.x || 6.x || 7.x || 8.x
+      react: '>=17'
+      react-dom: '>=17'
+      react-reconciler: 0.29.2 || 0.31.0
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+
   react-dom@19.1.0:
     resolution: {integrity: sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==}
     peerDependencies:
@@ -2478,6 +2520,17 @@ snapshots:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
+
+  '@babylonjs/core@8.10.1': {}
+
+  '@babylonjs/gui@8.10.1(@babylonjs/core@8.10.1)':
+    dependencies:
+      '@babylonjs/core': 8.10.1
+
+  '@babylonjs/loaders@8.10.1(@babylonjs/core@8.10.1)(babylonjs-gltf2interface@8.10.1)':
+    dependencies:
+      '@babylonjs/core': 8.10.1
+      babylonjs-gltf2interface: 8.10.1
 
   '@cspotcode/source-map-support@0.8.1':
     dependencies:
@@ -3269,6 +3322,8 @@ snapshots:
       '@babel/runtime': 7.27.1
       cosmiconfig: 7.1.0
       resolve: 1.22.10
+
+  babylonjs-gltf2interface@8.10.1: {}
 
   balanced-match@1.0.2: {}
 
@@ -4364,6 +4419,15 @@ snapshots:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
+
+  react-babylonjs@3.2.5-beta.2(@babylonjs/core@8.10.1)(@babylonjs/gui@8.10.1(@babylonjs/core@8.10.1))(react-dom@19.1.0(react@19.1.0))(react-reconciler@0.31.0(react@19.1.0))(react@19.1.0):
+    dependencies:
+      '@babylonjs/core': 8.10.1
+      '@babylonjs/gui': 8.10.1(@babylonjs/core@8.10.1)
+      react: 19.1.0
+      react-reconciler: 0.31.0(react@19.1.0)
+    optionalDependencies:
+      react-dom: 19.1.0(react@19.1.0)
 
   react-dom@19.1.0(react@19.1.0):
     dependencies:
