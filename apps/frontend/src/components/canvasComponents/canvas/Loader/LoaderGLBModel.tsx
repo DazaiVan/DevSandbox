@@ -13,7 +13,8 @@ function LoaderGLBModel({ url, position = [0, 0, 0] }: LoaderGLBModelProps) {
   // const model = useLoader(ObjectLoader, "/router.json");
   const groupRef = useRef<THREE.Group>(null);
   const { camera, scene } = useThree();
-  const [selectedObject, setSelectedObject] = useState<THREE.Object3D | null>(null);
+  const [selectedObject, setSelectedObject] = useState<THREE.BoxHelper | null>(null);
+  const [targetObject, setTargetObject] = useState<THREE.Object3D | null>(null);
   // // Проверка видимости объекта
   // const checkVisibility = (mesh: THREE.Mesh) => {
   //   if (!groupRef.current || !camera) return;
@@ -57,10 +58,18 @@ function LoaderGLBModel({ url, position = [0, 0, 0] }: LoaderGLBModelProps) {
     if (selectedObject !== null) {
       scene.remove(selectedObject)
     }
-    const box = new THREE.BoxHelper(event.object, 0xffff00);
-    box.material.depthTest = false
-    scene.add(box)
-    setSelectedObject(box);
+    if (event.object == targetObject)
+    {
+      setSelectedObject(null)
+      setTargetObject(null)
+    } else {
+      const box = new THREE.BoxHelper(event.object, 0xffff00);
+      box.material.depthTest = false
+      scene.add(box)
+      setSelectedObject(box);
+      setTargetObject(event.object)
+    }
+
 
   };
   return (
