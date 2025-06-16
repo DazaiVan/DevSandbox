@@ -6,11 +6,13 @@
         "packages/*"
     ],
     "scripts": {
-        "start": "pnpm --parallel --stream start",
-        "dev": "pnpm --parallel --stream dev",
-        "build": "pnpm --parallel --stream build"
+        "start": "concurrently \"pnpm run start:backend\" \"pnpm run start:frontend\"",
+        "start:frontend": "cd apps/frontend && pnpm run start:all",
+        "start:backend": "cd apps/backend && pnpm dev",
+        "build": "concurrently \"cd apps/backend && pnpm run build\" \"cd apps/frontend && pnpm run build\""
     },
     "devDependencies": {
+        "concurrently": "^9.1.2",
         "typescript": "^5.0.0"
     },
     "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
