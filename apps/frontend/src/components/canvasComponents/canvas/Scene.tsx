@@ -9,7 +9,8 @@ interface SceneProps{
 
 }
 useGLTF.preload('/emo_robot.glb')
-function Scene({ }:SceneProps) {
+function Scene({ }: SceneProps) {
+  console.log("Test")
   return (
     <Canvas camera={{ far: 5000 }}>
       <Suspense fallback={<LoadingIndicator />}>
