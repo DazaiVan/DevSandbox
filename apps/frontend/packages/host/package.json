@@ -4,10 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite --port 5000 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 5000 --strictPort",
+    "serve": "vite preview --port 5000 --strictPort"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

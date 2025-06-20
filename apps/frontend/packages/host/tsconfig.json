@@ -3,5 +3,17 @@
   "references": [
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
-  ]
+  ],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "app1/*": ["../app1/src/*"],
+      "app2/*": ["../app2/src/*"]
+    },
+    "declaration": true,  
+   
+      "jsx": "react-jsx"  // Автоматически подключает React для JSX
+    
+  
+  }
 }

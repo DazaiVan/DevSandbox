@@ -2,18 +2,21 @@
   "name": "frontend",
   "private": true,
   "scripts": {
-    "start:all": "concurrently \"pnpm start:host\" \"pnpm start:app1\" \"pnpm start:app2\"",
-    "start:host": "cd packages/host && pnpm dev",
-    "start:app1": "cd packages/app1 && pnpm dev",
-    "start:app2": "cd packages/app2 && pnpm dev",
-    "build": "pnpm -r run build"
+      "build": "pnpm --parallel --filter \"./**\" build",
+      "serve": "pnpm --parallel --filter \"./**\" preview",
+      "build:remotes": "pnpm --parallel --filter \"./app2\" build",
+      "serve:remotes": "pnpm --parallel --filter \"./app2\" serve",
+      "dev:hosts": "pnpm --filter \"./host\" dev",
+      "stop": "kill-port --port 5000,5001"
   },
   "dependencies": {
+    "@module-federation/vite": "^1.5.0",
+    "@vitejs/plugin-react": "^4.5.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
   },
   "devDependencies": {
-    "@originjs/vite-plugin-federation": "^1.1.12",
+    "@originjs/vite-plugin-federation": "^1.4.1",
     "concurrently": "^9.1.2",
     "typescript": "^4.9.0",
     "vite": "^4.0.0"

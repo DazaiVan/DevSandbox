@@ -7,8 +7,8 @@
     ],
     "scripts": {
         "start": "concurrently \"pnpm run start:backend\" \"pnpm run start:frontend\"",
-        "start:frontend": "cd apps/frontend && pnpm run start:all",
-        "start:backend": "cd apps/backend && pnpm dev",
+        "start:frontend": "cd apps/frontend && pnpm serve",
+        "start:backend": "cd apps/backend && pnpm start",
         "build": "concurrently \"cd apps/backend && pnpm run build\" \"cd apps/frontend && pnpm run build\""
     },
     "devDependencies": {

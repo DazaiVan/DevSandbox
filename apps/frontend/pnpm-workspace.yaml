@@ -1,2 +1,5 @@
+# packages:
+#   - 'packages/*'
 packages:
-  - 'packages/*'
+  - "packages/host"
+  - "packages/app2"
