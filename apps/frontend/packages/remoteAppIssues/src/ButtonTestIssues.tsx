@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
-function ButtonTest() {
+function ButtonTestIssues() {
 
     const [count, setCount] = useState(0)
   return (
     <button onClick={() => setCount((count) => count + 1)}>
-    count2 is {count}
+    countIssues is {count}
   </button>
   )
 }
 
-export default ButtonTest
+export default ButtonTestIssues

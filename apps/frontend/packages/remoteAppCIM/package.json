@@ -1,13 +1,13 @@
 {
-  "name": "app2",
+  "name": "remoteAppCIM",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5002 --strictPort",
+    "dev": "vite --port 5001 --strictPort",
     "build": "vite build",
-    "preview": "vite preview --port 5002 --strictPort",
-    "serve": "vite preview --port 5002 --strictPort"
+    "preview": "vite preview --port 5001 --strictPort",
+    "serve": "vite preview --port 5001 --strictPort"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

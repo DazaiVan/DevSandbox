@@ -7,8 +7,8 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "app1/*": ["../app1/src/*"],
-      "app2/*": ["../app2/src/*"]
+      "remoteAppCIM/*": ["../remoteAppCIM/src/*"],
+      "remoteAppIssues/*": ["../remoteAppIssues/src/*"]
     },
     "declaration": true,  
    

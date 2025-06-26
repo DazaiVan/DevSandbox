@@ -2,12 +2,12 @@
   "name": "frontend",
   "private": true,
   "scripts": {
-      "build": "pnpm --parallel --filter \"./**\" build",
-      "serve": "pnpm --parallel --filter \"./**\" preview",
-      "build:remotes": "pnpm --parallel --filter \"./app2\" build",
-      "serve:remotes": "pnpm --parallel --filter \"./app2\" serve",
-      "dev:hosts": "pnpm --filter \"./host\" dev",
-      "stop": "kill-port --port 5000,5001"
+    "build": "pnpm --filter \"./packages/host\" build && pnpm --filter \"./packages/remoteAppCIM\" build && pnpm --filter \"./packages/remoteAppIssues\" build",
+    "serve": "pnpm --parallel --filter \"./**\" preview",
+    "build:remotes": "pnpm --parallel --filter \"./app2\" build",
+    "serve:remotes": "pnpm --parallel --filter \"./app2\" serve",
+    "dev:hosts": "pnpm --filter \"./host\" dev",
+    "stop": "kill-port --port 5000,5001"
   },
   "dependencies": {
     "@module-federation/vite": "^1.5.0",

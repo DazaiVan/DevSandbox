@@ -6,11 +6,12 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: "app1",
+      name: "remoteAppCIM",
       filename: "remoteEntry.js",
-      // exposes: {
-      //   './Button': './src/components/Button' // пример, замените на ваш реальный компонент
-      // },
+      exposes: {
+        './App': './src/App.tsx',
+        './ButtonTestCIM': './src/ButtonTestCIM.tsx'
+      },
       shared: ['react','react-dom']
     })
   ],

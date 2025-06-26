@@ -1,15 +1,14 @@
 {
-  "name": "app1",
+  "name": "remoteAppIssues",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "vite --port 5002 --strictPort",
+    "build": "vite build",
+    "preview": "vite preview --port 5002 --strictPort",
+    "serve": "vite preview --port 5002 --strictPort"
   },
-
   "devDependencies": {
     "@eslint/js": "^9.25.0",
     "@types/react": "^19.1.2",
