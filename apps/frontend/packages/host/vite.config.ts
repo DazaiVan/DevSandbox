@@ -12,7 +12,7 @@ export default defineConfig({
         remoteAppCIM: 'http://localhost:5001/assets/remoteEntry.js',
         remoteAppIssues: 'http://localhost:5002/assets/remoteEntry.js'
       },
-      shared: ['react','react-dom']
+      shared: ['react','react-dom','mobx-react']
     })
   ],
   build: {

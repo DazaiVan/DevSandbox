@@ -10,10 +10,9 @@ export default defineConfig({
       name: "remoteAppIssues",
       filename: "remoteEntry.js",
       exposes: {
-        './App': './src/App.tsx',
-        './ButtonTestIssues': './src/ButtonTestIssues.tsx'
+        './App': './src/App.tsx'
       },
-      shared: ['react','react-dom']
+      shared: ['react','react-dom','mobx-react']
     })
   ],
   build: {

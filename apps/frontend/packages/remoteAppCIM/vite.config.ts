@@ -9,10 +9,9 @@ export default defineConfig({
       name: "remoteAppCIM",
       filename: "remoteEntry.js",
       exposes: {
-        './App': './src/App.tsx',
-        './ButtonTestCIM': './src/ButtonTestCIM.tsx'
+        './App': './src/App.tsx'
       },
-      shared: ['react','react-dom']
+      shared: ['react','react-dom','mobx-react']
     })
   ],
   build: {
