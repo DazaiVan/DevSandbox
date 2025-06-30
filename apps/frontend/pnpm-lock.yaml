@@ -45,10 +45,28 @@ importers:
       antd:
         specifier: ^5.26.2
         version: 5.26.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      mobx:
+        specifier: ^6.13.7
+        version: 6.13.7
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
         version: 9.29.0
+      '@thatopen/components':
+        specifier: ~2.4.2
+        version: 2.4.11(@thatopen/fragments@2.4.0(three@0.174.0))(three@0.174.0)(web-ifc@0.0.66)
+      '@thatopen/components-front':
+        specifier: ~2.4.2
+        version: 2.4.12(@thatopen/fragments@2.4.0(three@0.174.0))(three@0.174.0)(web-ifc@0.0.66)
+      '@thatopen/fragments':
+        specifier: ~2.4.0
+        version: 2.4.0(three@0.174.0)
+      '@thatopen/ui':
+        specifier: ~2.4.0
+        version: 2.4.5
+      '@thatopen/ui-obc':
+        specifier: ~2.4.0
+        version: 2.4.4(@thatopen/components-front@2.4.12(@thatopen/fragments@2.4.0(three@0.174.0))(three@0.174.0)(web-ifc@0.0.66))(@thatopen/components@2.4.11(@thatopen/fragments@2.4.0(three@0.174.0))(three@0.174.0)(web-ifc@0.0.66))(three@0.174.0)(web-ifc@0.0.66)
       '@types/react':
         specifier: ^19.1.2
         version: 19.1.8
@@ -73,6 +91,9 @@ importers:
       mobx-react:
         specifier: ^9.2.0
         version: 9.2.0(mobx@6.13.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      mobx-react-lite:
+        specifier: ^4.1.0
+        version: 4.1.0(mobx@6.13.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       three:
         specifier: 0.174.0
         version: 0.174.0
@@ -85,9 +106,15 @@ importers:
       vite:
         specifier: ^6.3.5
         version: 6.3.5(@types/node@16.18.126)(jiti@1.21.7)(terser@5.43.1)(yaml@2.8.0)
+      web-ifc:
+        specifier: ^0.0.66
+        version: 0.0.66
 
   packages/remoteAppCIM:
     dependencies:
+      '@ant-design/icons':
+        specifier: ^6.0.0
+        version: 6.0.0(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       '@mdi/js':
         specifier: ^7.4.47
         version: 7.4.47
@@ -142,9 +169,15 @@ importers:
       antd-style:
         specifier: ^3.7.1
         version: 3.7.1(@types/react@18.3.23)(antd@5.26.2(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      dayjs:
+        specifier: ^1.11.13
+        version: 1.11.13
       jszip:
         specifier: 3.10.1
         version: 3.10.1
+      mobx:
+        specifier: ^6.13.7
+        version: 6.13.7
       mobx-react-lite:
         specifier: ^4.1.0
         version: 4.1.0(mobx@6.13.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
