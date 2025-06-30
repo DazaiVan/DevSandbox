@@ -108,7 +108,7 @@ export class SceneStore {
             //   absolute: true,
             // };
             ifcLoader.settings.wasm = {
-                path: "/web-ifc/",
+                path: "http://localhost:5001/web-ifc/",
                 absolute: true,
             };
         }
