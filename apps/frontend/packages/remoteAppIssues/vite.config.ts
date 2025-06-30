@@ -12,7 +12,16 @@ export default defineConfig({
       exposes: {
         './App': './src/App.tsx'
       },
-      shared: ['react','react-dom','mobx-react']
+      shared: ['react','react-dom','mobx-react','mobx-react-lite',{
+        // Явно указываем three и его версию
+        'three': {
+          version: '0.174.0', // Замените на нужную версию
+        }
+      },'@thatopen/components',      {
+        'web-ifc': {
+          version: '^0.0.66',
+        }
+      }]
     })
   ],
   build: {
@@ -20,5 +29,6 @@ export default defineConfig({
     target: 'esnext',
     minify: false,
     cssCodeSplit: false
-  }
+  },
+ 
 })

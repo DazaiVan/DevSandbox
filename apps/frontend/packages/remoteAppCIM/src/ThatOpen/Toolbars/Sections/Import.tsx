@@ -81,7 +81,7 @@ const Load = observer(() => {
     if (!file) return;
     // await ifcLoader.setup();
     ifcLoader.settings.wasm = {
-      path: "/web-ifc/",
+      path: "http://localhost:5001/web-ifc/",
       absolute: true,
     };
 
