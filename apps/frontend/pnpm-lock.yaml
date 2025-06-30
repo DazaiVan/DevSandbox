@@ -214,6 +214,13 @@ importers:
         version: 4.5.14(@types/node@16.18.126)(terser@5.43.1)
 
   packages/remoteAppIssues:
+    dependencies:
+      '@thatopen/components':
+        specifier: ~2.4.11
+        version: 2.4.11(@thatopen/fragments@2.4.0(three@0.174.0))(three@0.174.0)(web-ifc@0.0.66)
+      web-ifc:
+        specifier: ^0.0.66
+        version: 0.0.66
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
@@ -242,6 +249,9 @@ importers:
       mobx-react:
         specifier: ^9.2.0
         version: 9.2.0(mobx@6.13.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      mobx-react-lite:
+        specifier: ^4.1.0
+        version: 4.1.0(mobx@6.13.7)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
       three:
         specifier: 0.174.0
         version: 0.174.0
