@@ -11,7 +11,7 @@ const Minimap = observer(() => {
     }, [store.sceneStore.getIsWorldReady]);
 
     return (
-        <div style={{position: "fixed",right: "1em",top: "1em"}}>
+        <div style={{position: "absolute",right: "1em",top: "1em"}}>
             <div ref={mapContainerRef}/>
         </div>
     );

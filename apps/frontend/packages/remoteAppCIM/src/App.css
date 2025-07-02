@@ -198,11 +198,15 @@
   background-color: var(--bim-ui_accent-base);
 }
 .viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 75%;
+  height: 100%;
   overflow: hidden;
 }
 .leftpanel {
-  height: 100vh;
+  height: 100%;
   width: 25%;
   overflow-y: auto;
   overflow-x: hidden;
@@ -558,5 +562,23 @@ div.input,
 .ant-btn-primary:hover {
     background: var(--bg-primary) !important;
     border-color: var(--text-secondary) !important;
+}
+
+.cim-root {
+  width: 100vw;
+  height: 100vh;
+  min-height: 100vh;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+html, body, #root, .cim-root {
+  overflow: hidden !important;
+  height: 100vh !important;
 }
 

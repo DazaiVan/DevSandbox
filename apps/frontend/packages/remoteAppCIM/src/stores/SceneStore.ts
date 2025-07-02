@@ -20,6 +20,7 @@ interface GridInstance {
 }
 
 export class SceneStore {
+    private inited: boolean = false;
     private components = new OBC.Components();
     private worlds = this.components.get(OBC.Worlds);
     private world = this.worlds.create<
@@ -38,6 +39,14 @@ export class SceneStore {
         return this.worldGridInstance;
     }
 
+    get getInit () {
+        return this.inited
+    }
+    
+    setInit () {
+        this.inited = true;
+    }
+
 
     private maps = this.components.get(OBC.MiniMaps);
     private map:any = null;
@@ -54,40 +63,66 @@ export class SceneStore {
     get getWorld() {
         return this.world;
     }
+
+    dispose() {
+        // Удаляем renderer, если есть
+        if (this.world && this.world.renderer && typeof this.world.renderer.dispose === 'function') {
+            this.world.renderer.dispose();
+        }
+        // Очищаем сцену
+        if (this.world && this.world.scene && typeof this.world.scene.dispose === 'function') {
+            this.world.scene.dispose();
+        }
+
+        // Полностью пересоздаём все компоненты и связанные объекты
+        this.components = new OBC.Components();
+        this.worlds = this.components.get(OBC.Worlds);
+        this.world = this.worlds.create<
+            OBC.SimpleScene,
+            OBC.OrthoPerspectiveCamera,
+            OBF.PostproductionRenderer
+        >();
+        this.worldGridManager = this.components.get(OBC.Grids);
+        this.worldGridInstance = null;
+        this.inited = false;
+        this.isWorldReady = false;
+        this.map = null;
+    }
+
+
     init(viewportContainer: React.RefObject<HTMLDivElement>) {
+        
         this.world.name = "Main";
         this.world.scene = new OBC.SimpleScene(this.components);
         this.world.scene.setup();
         this.world.scene.three.background = null;
         if(viewportContainer.current) {
-            this.world.renderer = new OBF.PostproductionRenderer(this.components, viewportContainer.current );
+            if(!this.world.renderer) {
+                this.world.renderer = new OBF.PostproductionRenderer(this.components, viewportContainer.current );
+            }
         }
         const {postproduction} = this.world.renderer!;
         this.world.camera = new OBC.OrthoPerspectiveCamera(this.components);
 
-        const gridInstance = this.worldGridManager.create(this.world) as unknown as GridInstance;
-        this.setWorldGrid(gridInstance);
-        const worldGrid = this.getWorldGrid;
+        if(!this.worldGridManager || !this.worldGridInstance) {
+            const gridInstance = this.worldGridManager.create(this.world) as unknown as GridInstance;
+            this.setWorldGrid(gridInstance);
+            const worldGrid = this.getWorldGrid;
+    
+            if (worldGrid) {
+                worldGrid.material.uniforms.uColor.value = new THREE.Color("blue");
+                worldGrid.material.uniforms.uSize1.value = 5;
+                worldGrid.material.uniforms.uSize2.value = 5;
+                
+            }
 
-        if (worldGrid) {
-            worldGrid.material.uniforms.uColor.value = new THREE.Color("blue");
-            worldGrid.material.uniforms.uSize1.value = 5;
-            worldGrid.material.uniforms.uSize2.value = 5;
-            
+            this.components.init();
+            postproduction.enabled = false;
+            if (worldGrid) {
+                postproduction.customEffects.excludedMeshes.push(worldGrid.three);
+            }
         }
 
-
-        console.log(
-            this.world.scene.directionalLights.forEach((el) => {
-            el.intensity = 10
-        
-        }))
-
-        this.components.init();
-        postproduction.enabled = false;
-        if (worldGrid) {
-            postproduction.customEffects.excludedMeshes.push(worldGrid.three);
-        }
         postproduction.setPasses({custom: true, ao: true, gamma: true});
         postproduction.customEffects.lineColor = 0x17191c;
         this.isWorldReady = true;

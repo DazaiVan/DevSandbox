@@ -21,7 +21,7 @@ function App() {
         top: 0,
         left: 0,
         width: '100%',
-        height: 60,
+        height: "7%",
         zIndex: 100,
       }}>
         <Button
@@ -36,7 +36,7 @@ function App() {
         <div
           style={{
             position: 'fixed',
-            top: 60,
+            top: '7%',
             left: 0,
             width: 200,
             height: 'calc(100vh - 60px)',
@@ -45,7 +45,7 @@ function App() {
             zIndex: 200,
             display: 'flex',
             flexDirection: 'column',
-            boxShadow: '2px 0 8px rgba(0,0,0,0.15)'
+            boxShadow: '2px 0 8px rgba(5, 1, 1, 0.15)'
           }}
         >
           <Button type="text" style={{ color: '#fff', textAlign: 'left', padding: 16 }} onClick={() => { setActiveApp('remoteAppCIM'); setMenuOpen(false); }}>CIM</Button>
@@ -55,13 +55,12 @@ function App() {
       <Layout.Content 
         style={{ 
           position: 'absolute',
-          top: 60, 
+          top: '7%', 
           left: 0, 
-          width: '100vw', 
-          height: 'calc(100vh - 60px)',
+          width: '100%', 
+          height: '93%',
           background: '#fff',
           overflow: 'auto',
-          padding: 24
         }}
       >
         <Suspense fallback={<div>Загрузка...</div>}>

@@ -6,12 +6,11 @@ import React from "react";
 
 function App() {
     return  (
-
-      <StoreProvider>
-          <ThemeProvider>
-              <Scene/>
-          </ThemeProvider>
-      </StoreProvider>
+        <StoreProvider>
+            <ThemeProvider>
+                <Scene/>
+            </ThemeProvider>
+        </StoreProvider>
   )
 }
 export default App;
