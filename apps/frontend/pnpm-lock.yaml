@@ -77,7 +77,7 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5
 
-  packages/remoteAppCIM:
+  packages/remoteApp1:
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
@@ -113,7 +113,7 @@ importers:
         specifier: ^6.3.5
         version: 6.3.5
 
-  packages/remoteAppIssues:
+  packages/remoteApp2:
     devDependencies:
       '@eslint/js':
         specifier: ^9.25.0
