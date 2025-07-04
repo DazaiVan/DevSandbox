@@ -8,7 +8,7 @@ function CanvasComponent() {
     <div className="app-container">
       <div className="canvas-container">
         <Scene />
-        {true && (
+        {/* {true && (
           <div className="right-panel">
             <h2>Панель управления</h2>
             <div className="panel-content">
@@ -17,7 +17,7 @@ function CanvasComponent() {
               <button>Действие 2</button>
             </div>
           </div>
-        )}
+        )} */}
       </div>
       <TestTS />
     </div>
