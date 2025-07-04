@@ -4,10 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "pnpm --filter ./apps/* dev",
+    "dev:app": "pnpm --filter ./apps/<your-app-name> dev",
+    "build": "pnpm --filter ./apps/* build",
+    "build:app": "pnpm --filter ./apps/<your-app-name> build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "lint:all": "pnpm -r lint",
+    "preview": "vite preview",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pnpm dev"
   },
   "dependencies": {
     "@react-three/drei": "^10.0.7",
@@ -28,6 +33,7 @@
     "@types/react": "^19.1.2",
     "@types/react-dom": "^19.1.2",
     "@vitejs/plugin-react-swc": "^3.9.0",
+    "concurrently": "^9.2.0",
     "eslint": "^9.25.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
