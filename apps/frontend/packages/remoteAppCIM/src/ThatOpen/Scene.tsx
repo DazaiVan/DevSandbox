@@ -30,7 +30,8 @@ const Scene = observer(()=>{
 
   return (
         <div style={{
-            height: '100%',
+          width: '100%',
+            height:"100%",
             position:'relative'
         }}>
           <div className={"leftpanel"}>
@@ -38,7 +39,7 @@ const Scene = observer(()=>{
           </div>
           <div className={"viewport"} ref={viewportContainer}>
             <ToolBar/>
-            {isInit === true? null : <Minimap/>}
+             <Minimap/>
           </div>
       </div>
   )

@@ -4,13 +4,13 @@
     { "path": "./tsconfig.app.json" },
     { "path": "./tsconfig.node.json" }
   ],
-    
+ 
   "compilerOptions": {
-      "experimentalDecorators": true,
+    "composite": true,
+    "declaration": true,  
+    "experimentalDecorators": true,
     "downlevelIteration": true,
     "target": "es5",
-        "composite": true,
-    "declaration": true,  
     "lib": [
       "dom",
       "dom.iterable",
