@@ -1,6 +1,6 @@
 # packages:
 #   - 'packages/*'
 packages:
-  - "packages/host"
-  - "packages/remoteAppCIM"
-  - "packages/remoteAppIssues"
+  - "./packages/host"
+  - "./packages/remoteAppCIM"
+  - "./packages/remoteAppIssues"
