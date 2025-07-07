@@ -9,7 +9,7 @@
         "start": "concurrently \"pnpm run start:backend\" \"pnpm run start:frontend\"",
         "start:frontend": "cd apps/frontend && pnpm i && pnpm build && pnpm start",
         "start:backend": "cd apps/backend && pnpm i && pnpm run build && pnpm start",
-        "build": "concurrently \"cd apps/backend && pnpm run build\" \"cd apps/frontend && pnpm  build\""
+        "build": "concurrently \"cd apps/backend && pnpm i && pnpm run build\" \"cd apps/frontend && pnpm i && pnpm  build\""
     },
     "devDependencies": {
         "concurrently": "^9.1.2",
