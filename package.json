@@ -1,0 +1,19 @@
+{
+    "name": "devsandbox",
+    "private": true,
+    "workspaces": [
+        "apps/*",
+        "packages/*"
+    ],
+    "scripts": {
+        "start": "concurrently \"pnpm run start:backend\" \"pnpm run start:frontend\"",
+        "start:frontend": "cd apps/frontend && pnpm i && pnpm build && pnpm start",
+        "start:backend": "cd apps/backend && pnpm i && pnpm run build && pnpm start",
+        "build": "concurrently \"cd apps/backend && pnpm i && pnpm run build\" \"cd apps/frontend && pnpm i && pnpm  build\""
+    },
+    "devDependencies": {
+        "concurrently": "^9.1.2",
+        "typescript": "^5.0.0"
+    },
+    "packageManager": "pnpm@10.11.1+sha512.e519b9f7639869dc8d5c3c5dfef73b3f091094b0a006d7317353c72b124e80e1afd429732e28705ad6bfa1ee879c1fce46c128ccebd3192101f43dd67c667912"
+}
