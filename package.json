@@ -11,10 +11,16 @@
   },
   "dependencies": {
     "@thatopen/components": "^3.1.0",
+    "@thatopen/components-front": "^3.1.6",
+    "@thatopen/fragments": "^3.1.6",
     "@thatopen/ui": "^3.1.1",
+    "@thatopen/ui-obc": "^3.1.2",
+    "@types/three": "^0.179.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "web-ifc": "^0.0.70",
+    "zustand": "^5.0.8"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

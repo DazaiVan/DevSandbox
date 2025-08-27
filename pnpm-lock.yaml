@@ -10,10 +10,22 @@ importers:
     dependencies:
       '@thatopen/components':
         specifier: ^3.1.0
-        version: 3.1.0(@thatopen/fragments@3.1.1(three@0.178.0)(web-ifc@0.0.69))(three@0.178.0)(web-ifc@0.0.69)
+        version: 3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/components-front':
+        specifier: ^3.1.6
+        version: 3.1.6(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/fragments':
+        specifier: ^3.1.6
+        version: 3.1.6(three@0.178.0)(web-ifc@0.0.70)
       '@thatopen/ui':
         specifier: ^3.1.1
         version: 3.1.1
+      '@thatopen/ui-obc':
+        specifier: ^3.1.2
+        version: 3.1.2(@thatopen/components-front@3.1.6(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70))(@thatopen/components@3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70))(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@types/three':
+        specifier: ^0.179.0
+        version: 0.179.0
       react:
         specifier: ^19.1.0
         version: 19.1.0
@@ -23,6 +35,12 @@ importers:
       three:
         specifier: ^0.178.0
         version: 0.178.0
+      web-ifc:
+        specifier: ^0.0.70
+        version: 0.0.70
+      zustand:
+        specifier: ^5.0.8
+        version: 5.0.8(@types/react@19.1.8)(react@19.1.0)
     devDependencies:
       '@eslint/js':
         specifier: ^9.30.1
@@ -59,6 +77,9 @@ importers:
         version: 7.0.5
 
 packages:
+
+  '@dimforge/rapier3d-compat@0.12.0':
+    resolution: {integrity: sha512-uekIGetywIgopfD97oDL5PfeezkFpNhwlzlaEYNOA0N6ghdsOvh/HYjSMek5Q2O1PYvRSDFcqFVJl4r4ZBwOow==}
 
   '@esbuild/aix-ppc64@0.25.6':
     resolution: {integrity: sha512-ShbM/3XxwuxjFiuVBHA+d3j5dyac0aEVVq1oluIDf71hUw0aRF59dV/efUsIwFnR6m8JNM2FjZOzmaZ8yG61kw==}
@@ -482,6 +503,13 @@ packages:
   '@swc/types@0.1.23':
     resolution: {integrity: sha512-u1iIVZV9Q0jxY+yM2vw/hZGDNudsN85bBpTqzAQ9rzkxW9D+e3aEM4Han+ow518gSewkXgjmEK0BD79ZcNVgPw==}
 
+  '@thatopen/components-front@3.1.6':
+    resolution: {integrity: sha512-ActMURdeRtmVdDFksAp7kFNIiKAKTErm2rmwHH/T09Sj+nslABgH2N4S4nx6UDL2xJ83ktdxvrOBw/jCW+vdIA==}
+    peerDependencies:
+      '@thatopen/fragments': ~3.1.0
+      three: '>=0.175.0'
+      web-ifc: 0.0.70
+
   '@thatopen/components@3.1.0':
     resolution: {integrity: sha512-DdkcST2BjXooMIxwO6K1y/vwZE3zy9cauaDy+vtVJldcjjORfWNl7FC8mqR98vXn2Pb9LtY/d7VNzIuq4H8Z6A==}
     peerDependencies:
@@ -489,14 +517,26 @@ packages:
       three: '>=0.175.0'
       web-ifc: 0.0.69
 
-  '@thatopen/fragments@3.1.1':
-    resolution: {integrity: sha512-CYs69tSjicJgjmG02lk0otGBL7pQAQSy10HomOhjpwlEfLyEVMDjVMjj814mLebIbTatBtuv2nnrG1dlen6ihQ==}
+  '@thatopen/fragments@3.1.6':
+    resolution: {integrity: sha512-aVuNRaR1CMuwO5AP6ReT2DRGsPWFChyJToOtYhAXo6slAqCGFjXbc6lPWqY1HdWwIB4bYzFMmDFuCdQFv4eMTg==}
     peerDependencies:
       three: '>=0.175'
-      web-ifc: 0.0.69
+      web-ifc: 0.0.70
+
+  '@thatopen/ui-obc@3.1.2':
+    resolution: {integrity: sha512-Wz3np9uduJrLh8ko8iBfQVG3fYEUa9jfYaITujFKnk2fCXwFqJlwT7UUt4yfdmm5+gYUacK+kNnENIm1jKMccQ==}
+    peerDependencies:
+      '@thatopen/components': ~3.1.0
+      '@thatopen/components-front': ~3.1.0
+      '@thatopen/fragments': ~3.1.0
+      three: '>=0.175.0'
+      web-ifc: 0.0.70
 
   '@thatopen/ui@3.1.1':
     resolution: {integrity: sha512-/vtV9lFbj7noZ3cyLxzaSBgtdq1JneMiEwmIk7KjMKha2ccjJdTBwHpZa4zdXiBHRLzAhcXDuzNVWPmyKPAAaA==}
+
+  '@tweenjs/tween.js@23.1.3':
+    resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
 
   '@types/estree@1.0.8':
     resolution: {integrity: sha512-dWHzHa2WqEXI/O1E9OjrocMTKJl2mSrEolh1Iomrv6U+JuNwaHXsXx9bLu5gG7BUWFIN0skIQJQ/L1rIex4X6w==}
@@ -512,8 +552,17 @@ packages:
   '@types/react@19.1.8':
     resolution: {integrity: sha512-AwAfQ2Wa5bCx9WP8nZL2uMZWod7J7/JSplxbTmBQ5ms6QpqNYm672H0Vu9ZVKVngQ+ii4R/byguVEUZQyeg44g==}
 
+  '@types/stats.js@0.17.4':
+    resolution: {integrity: sha512-jIBvWWShCvlBqBNIZt0KAshWpvSjhkwkEu4ZUcASoAvhmrgAUI2t1dXrjSL4xXVLB4FznPrIsX3nKXFl/Dt4vA==}
+
+  '@types/three@0.179.0':
+    resolution: {integrity: sha512-VgbFG2Pgsm84BqdegZzr7w2aKbQxmgzIu4Dy7/75ygiD/0P68LKmp5ie08KMPNqGTQwIge8s6D1guZf1RnZE0A==}
+
   '@types/trusted-types@2.0.7':
     resolution: {integrity: sha512-ScaPdn1dQczgbl0QFTeTOmVHFULt394XJgOQNoyVhZ6r2vLnMLJfBPd53SB52T/3G36VI1/g2MZaX0cwDuXsfw==}
+
+  '@types/webxr@0.5.22':
+    resolution: {integrity: sha512-Vr6Stjv5jPRqH690f5I5GLjVk8GSsoQSYJ2FVd/3jJF7KaqfwPi3ehfBS96mlQ2kPCwZaX6U0rG2+NGHBKkA/A==}
 
   '@typescript-eslint/eslint-plugin@8.37.0':
     resolution: {integrity: sha512-jsuVWeIkb6ggzB+wPCsR4e6loj+rM72ohW6IBn2C+5NCvfUVY8s33iFPySSVXqtm5Hu29Ne/9bnA0JmyLmgenA==}
@@ -578,6 +627,9 @@ packages:
     resolution: {integrity: sha512-xD3Rdvrt5LgANug7WekBn1KhcvLn1H3jNBfJRL3reeOIua/WnZOEV5qi5qIBq5T8R0jUDmRtxuvk4bPhzGHDWw==}
     peerDependencies:
       vite: ^4 || ^5 || ^6 || ^7.0.0-beta.0
+
+  '@webgpu/types@0.1.64':
+    resolution: {integrity: sha512-84kRIAGV46LJTlJZWxShiOrNL30A+9KokD7RB3dRCIqODFjodS5tCD5yyiZ8kIReGVZSDfA3XkkwyyOIF6K62A==}
 
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
@@ -750,6 +802,9 @@ packages:
       picomatch:
         optional: true
 
+  fflate@0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
+
   file-entry-cache@8.0.0:
     resolution: {integrity: sha512-XXTUwCvisa5oacNGRP9SfNtYBNAMi+RPwBFmblZEF7N7swHYQS6/Zfk7SRwx4D5j3CH211YNRco1DEMNVfZCnQ==}
     engines: {node: '>=16.0.0'}
@@ -892,6 +947,9 @@ packages:
   merge2@1.4.1:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
+
+  meshoptimizer@0.22.0:
+    resolution: {integrity: sha512-IebiK79sqIy+E4EgOr+CAw+Ke8hAspXKzBd0JdgEmPHiAwmvEj2S4h1rfvo+o/BnfEYd/jAOg5IeeIjzlzSnDg==}
 
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
@@ -1126,8 +1184,8 @@ packages:
       yaml:
         optional: true
 
-  web-ifc@0.0.69:
-    resolution: {integrity: sha512-jGxHOSfGveyLN6xcMs6Z0oVimRHBTu5t+sivKOVEY3bArTGOvPtJX0L20XIjYnc3BTOfbeRElYiYZyN+tMTUVQ==}
+  web-ifc@0.0.70:
+    resolution: {integrity: sha512-uAeq7x0w7Nv0x2WUaUJrWosju/AfHkLXUhmWO9T/0QbXEHsi3K7yl/gBsJM3PM9APl1YPa2nxKYNBc1b8rRWNg==}
 
   which@2.0.2:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
@@ -1142,7 +1200,27 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
 
+  zustand@5.0.8:
+    resolution: {integrity: sha512-gyPKpIaxY9XcO2vSMrLbiER7QMAMGOQZVRdJ6Zi782jkbzZygq5GI9nG8g+sMgitRtndwaBSl7uiqC49o1SSiw==}
+    engines: {node: '>=12.20.0'}
+    peerDependencies:
+      '@types/react': '>=18.0.0'
+      immer: '>=9.0.6'
+      react: '>=18.0.0'
+      use-sync-external-store: '>=1.2.0'
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+      immer:
+        optional: true
+      react:
+        optional: true
+      use-sync-external-store:
+        optional: true
+
 snapshots:
+
+  '@dimforge/rapier3d-compat@0.12.0': {}
 
   '@esbuild/aix-ppc64@0.25.6':
     optional: true
@@ -1424,30 +1502,49 @@ snapshots:
     dependencies:
       '@swc/counter': 0.1.3
 
-  '@thatopen/components@3.1.0(@thatopen/fragments@3.1.1(three@0.178.0)(web-ifc@0.0.69))(three@0.178.0)(web-ifc@0.0.69)':
+  '@thatopen/components-front@3.1.6(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)':
     dependencies:
-      '@thatopen/fragments': 3.1.1(three@0.178.0)(web-ifc@0.0.69)
+      '@thatopen/components': 3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/fragments': 3.1.6(three@0.178.0)(web-ifc@0.0.70)
+      three: 0.178.0
+      web-ifc: 0.0.70
+
+  '@thatopen/components@3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)':
+    dependencies:
+      '@thatopen/fragments': 3.1.6(three@0.178.0)(web-ifc@0.0.70)
       camera-controls: 2.10.1(three@0.178.0)
       fast-xml-parser: 4.4.1
       jszip: 3.10.1
       three: 0.178.0
       three-mesh-bvh: 0.7.0(three@0.178.0)
-      web-ifc: 0.0.69
+      web-ifc: 0.0.70
 
-  '@thatopen/fragments@3.1.1(three@0.178.0)(web-ifc@0.0.69)':
+  '@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70)':
     dependencies:
       earcut: 3.0.2
       flatbuffers: 25.2.10
       lru-cache: 11.1.0
       pako: 2.1.0
       three: 0.178.0
-      web-ifc: 0.0.69
+      web-ifc: 0.0.70
+
+  '@thatopen/ui-obc@3.1.2(@thatopen/components-front@3.1.6(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70))(@thatopen/components@3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70))(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)':
+    dependencies:
+      '@thatopen/components': 3.1.0(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/components-front': 3.1.6(@thatopen/fragments@3.1.6(three@0.178.0)(web-ifc@0.0.70))(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/fragments': 3.1.6(three@0.178.0)(web-ifc@0.0.70)
+      '@thatopen/ui': 3.1.1
+      lit: 3.1.2
+      three: 0.178.0
+      web-ifc: 0.0.70
 
   '@thatopen/ui@3.1.1':
     dependencies:
       '@floating-ui/dom': 1.6.3
       iconify-icon: 2.0.0
       lit: 3.1.2
+
+  '@tweenjs/tween.js@23.1.3': {}
 
   '@types/estree@1.0.8': {}
 
@@ -1461,7 +1558,21 @@ snapshots:
     dependencies:
       csstype: 3.1.3
 
+  '@types/stats.js@0.17.4': {}
+
+  '@types/three@0.179.0':
+    dependencies:
+      '@dimforge/rapier3d-compat': 0.12.0
+      '@tweenjs/tween.js': 23.1.3
+      '@types/stats.js': 0.17.4
+      '@types/webxr': 0.5.22
+      '@webgpu/types': 0.1.64
+      fflate: 0.8.2
+      meshoptimizer: 0.22.0
+
   '@types/trusted-types@2.0.7': {}
+
+  '@types/webxr@0.5.22': {}
 
   '@typescript-eslint/eslint-plugin@8.37.0(@typescript-eslint/parser@8.37.0(eslint@9.31.0)(typescript@5.8.3))(eslint@9.31.0)(typescript@5.8.3)':
     dependencies:
@@ -1563,6 +1674,8 @@ snapshots:
       vite: 7.0.5
     transitivePeerDependencies:
       - '@swc/helpers'
+
+  '@webgpu/types@0.1.64': {}
 
   acorn-jsx@5.3.2(acorn@8.15.0):
     dependencies:
@@ -1767,6 +1880,8 @@ snapshots:
     optionalDependencies:
       picomatch: 4.0.3
 
+  fflate@0.8.2: {}
+
   file-entry-cache@8.0.0:
     dependencies:
       flat-cache: 4.0.1
@@ -1894,6 +2009,8 @@ snapshots:
   lru-cache@11.1.0: {}
 
   merge2@1.4.1: {}
+
+  meshoptimizer@0.22.0: {}
 
   micromatch@4.0.8:
     dependencies:
@@ -2095,7 +2212,7 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.3
 
-  web-ifc@0.0.69: {}
+  web-ifc@0.0.70: {}
 
   which@2.0.2:
     dependencies:
@@ -2104,3 +2221,8 @@ snapshots:
   word-wrap@1.2.5: {}
 
   yocto-queue@0.1.0: {}
+
+  zustand@5.0.8(@types/react@19.1.8)(react@19.1.0):
+    optionalDependencies:
+      '@types/react': 19.1.8
+      react: 19.1.0
